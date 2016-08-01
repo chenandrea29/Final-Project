@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <title>Animal Shelters Nearby</title>
+  <link rel="icon" href="pinkpaw.png" sizes="16x16">
+  <style>
+    a {
+      text-decoration: none;
+    }
+    body {
+      text-align: center;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+      }
+    h1 {
+      color: pink;
+      font-family: "Rouge Script", cursive;
+      font-size: 60px;
+      text-shadow: 1px 1px 2px #082b34;
+      }
+  </style>
+  <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
+</head> 
+<body>
+  <a href = "pawesomepaws.html"><h1>Pawesome Pups</h1></a>
+  <div id="map" style="width: 100%; height: 600px;"></div>
+
+  <script type="text/javascript">
+    var locations = [
+
+      
+
+      ['Contra Costa Humane Society<br><p><img src=contra-costa-humane-society.png width=20%; height=20%>171 Mayhew Way #101, Pleasant Hill, CA 94523</p>', 37.937011, -122.054629, 20],
+
+      ['Rocket Dog Rescue<br><p><img src=rocket-dog-rescue.jpg width=20%; height=20%> 3150 18th St, San Francisco, CA 94110</p>', 37.762703, -122.414281, 19],
+
+      ['Northern California Family Dog Rescue<br><p><img src=Family-dog.jpg width=20%; height=20%>3rd Floor, 255 Alabama St, San Francisco, CA 94103</p>', 37.765744, -122.412168, 18],
+
+      ['San Francisco SPCA Mission Adoption Center<br><p><img src=missionSFadoption.png width=20%; height=20%>250 Florida St, San Francisco, CA 94103</p>', 37.766323, -122.411886, 17],
+
+      ['Muttville<br><p><img src=muttville.jpg width=20%; height=20%>255 Alabama St, San Francisco, CA 94103</p>', 37.765744, -122.412168, 16],
+
+      ['San Francisco Animal Care & Control<br><p><img src=animalCareControl.jpg width=20%; height=20%>1200 15th St, San Francisco, CA 94103</p>',37.767365 , -122.412943, 15],
+
+      ['Wonder Dog Rescue<br><p><img src=WonderDog-Logo.jpg width=20%; height=20%>2926 16th St, San Francisco, CA 94103</p>', 37.765383, -122.418293, 14],
+
+      ['East Bay SPCA Oakland Facilities<br><p><img src=oaklandeastbay.jpg width=20%; height=20%>8323 Baldwin St, Oakland, CA 94621</p>', 37.745500, -122.194070, 13],
+
+      ['Bay Area Poodle Rescue<br><p><img src=poodleshelter.jpg width=20%; height=20%>1442-A Walnut St #204, Berkeley, CA 94709</p>', 37.880593, -122.268393, 12],
+
+      ['Hopalong Animal Rescue<br><p><img src=hopalong.jpg width=20%; height=20%>945 22nd Ave, Oakland, CA 94606</p>',37.781669, -122.241247 , 11],
+              
+
+      ['Peninsula Humane Society & SPCA<br><p><img src=HSSV-logo.jpg width=20%; height=20%>12 Airport Blvd, San Mateo, CA 94401</p>',37.587382, -122.331119 , 10],
+
+      ['Dusty Paws Rescue Inc<br><p><img src=DustyPawsRescue.jpg width=20%; height=20%>Castro Valley, CA</p>',37.718865, -122.078063 , 9],
+
+      ['Berkeley Humane<br><p><img src=berkley_humane.png width=20%; height=20%>2700 Ninth Street, Berkeley, CA 94710</p>',37.857066 , -122.291235, 8],
+
+      ['SPCA Outreach<br><p><img src=SPCA_outreach.gif width=20%; height=20%>21 Stockton St, San Francisco, CA 94108</p>',37.787084 , -122.406620 , 7],
+
+      ['San Francisco SPCA Pacific Heights Adoption Center<br><p><img src=spcaSF.png width=20%; height=20%>2343 Fillmore St, San Francisco, CA 94115</p>', 37.791333, -122.434577, 6],
+
+      ['Rocket Dog Rescue Sanctuary<br><p><img src=Rocket-Dog-Rescue-san.jpg width=20%; height=20%>3150 18th St, San Francisco, CA 94110</p>', 37.781167, -122.218996, 5],
+
+      ['Oakland Animal Services<br><p><img src=OAS-logo.jpg width=20%; height=20%>1101 29th Ave, Oakland, CA 94601</p>', 37.777651, -122.231913, 4],
+
+      ['The Milo Foundation<br><p><img src=MiloLogo.jpg width=20%; height=20%>220 S Garrard Blvd, Richmond, CA 94801</p>', 37.928933, -122.379670, 3],
+
+      ['East Bay SPCA, Tri-Valley<br><p><img src=eastbaytrivalley.jpg width=20%; height=20%>4651 Gleason Dr, Dublin, CA 94568</p>', 37.713886, -121.879919, 2],
+
+      ['Peninsula Humane Society & SPCA Adoption Center<br><p><img src=phs.jpg width=20%; height=20%>1450 Rollins Rd, Burlingame, CA 94010</p>', 37.587382, -121.331119, 1]
+    ];
+
+    function initMap(){
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        
+        center: {lat: 37.829311, lng: -122.283089}
+        // mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      // var marker = new google.maps.Marker({
+      //   position: {lat: locations[0][1], lng: locations[0][2]},
+      //   map: map,
+      //   title: "Bayarea"
+      // });
+
+      // marker.addListener('click', function toggleBounce() {
+      //   if (marker.getAnimation() !== null) {
+      //     marker.setAnimation(null);
+      //   } else {
+      //     marker.setAnimation(google.maps.Animation.BOUNCE);
+      //   }
+      // });
+
+      
+
+      
+
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) {  
+        marker = new google.maps.Marker({
+          position: {lat: locations[i][1], lng: locations[i][2]},
+          map: map
+
+        });
+        var infowindow = new google.maps.InfoWindow({content: locations[i][0] });
+        function_uno(marker, infowindow);
+        
+        
+
+      }
+    }
+
+    // Adds an infowindow to a marker
+    function function_uno(marker, infowindow) {
+      marker.addListener('click', function(){
+        infowindow.open(marker.getMap(), marker);
+      });
+
+    }
+
+    //   google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    //     return function() {
+    //       infowindow.setContent(locations[i][0]);
+    //       infowindow.open(map, marker);
+    //     }
+    //   })(marker, i));
+    // }
+    </script>
+    <script
+      async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+    </script>
+</body>
+</html>
+

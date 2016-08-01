@@ -1,0 +1,39 @@
+html
+
+h1 {padding: 10px; color: pink; font-family: 'Rouge Script', cursive; font-size: 100px; font-weight: normal; line-height: 48px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
+
+
+h2 { background-color: orange; color: #a7e8f8; font-family: 'Julius Sans One', sans-serif; font-size: 22px; font-weight: bold; line-height: 32px; margin: 0 0 24px; text-shadow: 1px 1px 1px #082b34; }
+
+
+p { color: blue; font-family: 'Carme', sans-serif; font-size: 16px; line-height: 24px; margin: 0 0 24px; }
+
+
+a { color: #CEF0D4; text-decoration: underline; }
+
+
+a:hover { color: #a7e8f8; text-decoration: underline; }
+
+p { 
+color: pink; 
+}
+
+body {
+  background: blue;
+  padding: 10px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+html {
+	background-color: pink;
+}
+
+navbar-nav navbar-right {
+	color: blue;
+	background-color: blue;
+}
+
+navbar navbar-default {
+	 color:blue;
+	 background-color: blue;
+}

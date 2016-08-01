@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="pinkpaw.png" sizes="16x16">
+		<title> Play with Pups! </title>
+		<style>
+			body {
+				text-align: center;
+				font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+			}
+			h1 {
+				color: pink;
+				font-family: "Rouge Script", cursive;
+				font-size: 60px;
+				text-shadow: 1px 1px 2px #082b34;
+			}
+			a {
+				text-decoration: none;
+			}
+			img.actions {
+				width: 60px;
+				height: 60px;
+				display: inline;
+				margin: 0 10px 0 10px;
+				border-width: 5px;
+				padding: 5px;
+			}
+			img.actions:hover {
+				border-color: lightblue;
+			}
+			img {
+				height: 400px;
+				width: 400px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 30px;
+				border: solid;
+				border-color: pink;
+				padding: 10px;
+				border-width: 10px;
+			}
+			p {
+				margin: 0;
+				display: inline;
+			}
+			.buttons > div {
+				text-align: center;
+				width: 100px;
+				display: inline-block; 
+			}
+			.buttons p {
+				margin: 0;
+			}
+		</style>
+	</head>
+	<a href = "pawesomepaws.html"><h1>Pawesome Pups</h1></a>
+	<body>
+		<!-- Pictures of User's Dog -->
+		<img src = "pug.png" id = "pug" style = "display: none;">
+		<img src = "hus.png" id = "husky" style = "display: none;">
+		<img src = "bulli.png" id = "bulldog" style = "display: none;">
+		<img src = "pood.png" id = "poodle" style = "display: none;">
+		<img src = "corgi.png" id = "corgi" style = "display: none;">
+		<img src = "turu.png.gif" id = "beagle" style = "display: none;">
+		<img src = "puppy.png" id = "labrador-retriever" style = "display: none;">
+		<img src = "retri.png" id = "golden-retriever" style = "display: none;">
+		<img src = "shep.png" id = "german-shepherd" style = "display: none;">
+		<img src = "pom.png" id = "pomeranian" style = "display: none;">
+
+		<!-- Happiness Meter -->
+		<h2>Happiness: <span id = "happiness"></span>%</h2>
+
+		<p id = "goodFeed" style = "display: none">You have fed your hungry pup!<br>Fun fact: Small dogs only need 1/4 to 3/4 cup of food a day, while big dogs can eat up to 2 to 4 cups a day.</p>
+		<p id = "badFeed" style = "display: none">Oh no, you have fed your dog too many times and have made it too full and unhappy.</p>
+
+		<p id = "goodGroom" style = "display: none">Your dog is now clean and happy!<br>Fun fact: Dogs don't need to be groomed often; how often also depends on the dog's breed and fur type.</p>
+		<p id = "badGroom" style = "display: none">Watch out! Dogs don't like to be groomed too often.</p>
+
+		<p id = "goodWalk" style = "display: none">Your pup loved going outside and letting off all that energy!<br>Fun fact: Active breeds need a minimum of 30 minutes of hard aerobic exercise most days of the week, preferably daily.</p>
+		<p id = "badWalk" style = "display: none">Your dog is too tired to go on another walk.</p>
+
+		<p id = "goodPlay" style = "display: none">Your dog is super excited about playing with its toys!<br>Fun fact: Exercising helps to reduce behavior such as digging, excessive barking, and hyperactivity.</p>
+		<p id = "badPlay" style = "display: none">Your pup is too tired and would rather sleep.</p>
+
+		<p id = "goodWater" style = "display: none">You have given water to your thirsty pup!<br>Fun fact: A healthy dog drinks between 1/2 and 1 ounce of water per pound of body weight each day.</p>
+		<p id = "badWater" style = "display: none">Your dog has drank too much water.</p>
+
+		<p id = "goodLove" style = "display: none">Your love makes your dog happy, and it loves you a lot too!<br>Fun fact: You can never love your dog too much! Make sure to give it the affection it deserves.</p>
+
+		<br>
+		<p id = "superHappy" style = "display: none">Wow! You are a master dog owner! Your pup is pawsitively happy : )</p>
+
+
+		<script src = "gamejs.js"></script>
+
+		<br>
+		<div class = "buttons">
+			<div id = "grooming">
+				<img src = "grooming.jpg" class = "actions" onclick = "groomDog()">
+				<p>Groom</p>
+			</div>
+			<div id = "walking">
+				<img src = "walk.jpg" class = "actions" onclick = "walkDog()">
+				<p>Walk</p>
+			</div>
+			<div id = "playing">
+				<img src = "playing.jpg" class = "actions" onclick = "playWithDog()">
+				<p>Play</p>
+			</div>
+			<div id = "feeding">
+				<img src = "feeding.jpg" class = "actions" onclick = "feedDog()">
+				<p>Feed</p>
+			</div>
+			<div id = "watering">
+				<img src = "water.svg" class = "actions" onclick = "giveWaterToDog()">
+				<p>Give Water</p>
+			</div>
+			<div id = "loving">
+				<img src = "love.png" class = "actions" onclick = "loveDog()">
+				<p>Love</p>
+			</div>
+		</div>
+	</body>
+</html>
+
